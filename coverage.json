@@ -1,0 +1,560 @@
+{
+  "sessions": [
+    "2017-06",
+    "2017-12",
+    "2018-12",
+    "2019-06",
+    "2019-12",
+    "2020-07",
+    "2020-09",
+    "2020-12",
+    "2021-06",
+    "2021-12",
+    "2022-06",
+    "2022-09",
+    "2022-12",
+    "2023-03",
+    "2023-06",
+    "2023-12",
+    "2024-06",
+    "2024-12",
+    "2025-06",
+    "2025-12",
+    "2026-06"
+  ],
+  "paperCount": 53,
+  "coverage": [
+    {
+      "session": "2017-06",
+      "paper": "第 2、3 套",
+      "answer": "第 2、3 套",
+      "audio": "缺",
+      "notes": "缺试卷第 1 套；缺可确认参考答案第 1 套；缺可核验录音"
+    },
+    {
+      "session": "2017-12",
+      "paper": "第 2、3 套",
+      "answer": "第 2、3 套",
+      "audio": "缺",
+      "notes": "缺试卷第 1 套；缺可确认参考答案第 1 套；缺可核验录音"
+    },
+    {
+      "session": "2018-06",
+      "paper": "缺",
+      "answer": "第 1、2、3 套",
+      "audio": "缺",
+      "notes": "缺试卷第 1、2、3 套；缺可核验录音"
+    },
+    {
+      "session": "2018-12",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "缺",
+      "notes": "缺可核验录音"
+    },
+    {
+      "session": "2019-06",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2 套",
+      "audio": "缺",
+      "notes": "缺可确认参考答案第 3 套；缺可核验录音"
+    },
+    {
+      "session": "2019-12",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "缺",
+      "notes": "缺可核验录音"
+    },
+    {
+      "session": "2020-07",
+      "paper": "第 1 套",
+      "answer": "缺",
+      "audio": "缺",
+      "notes": "缺可确认参考答案第 1 套；缺可核验录音"
+    },
+    {
+      "session": "2020-09",
+      "paper": "第 1、2 套",
+      "answer": "第 1、2 套",
+      "audio": "缺",
+      "notes": "缺可核验录音"
+    },
+    {
+      "session": "2020-12",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "录音 1、2",
+      "notes": "第 3 套没有独立录音，按卷面说明选用同场录音；试卷 PDF 附有客观题答案；另有参考解析"
+    },
+    {
+      "session": "2021-06",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "录音 1、2",
+      "notes": "第 3 套没有独立录音，按卷面说明选用同场录音"
+    },
+    {
+      "session": "2021-12",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2 套",
+      "audio": "缺",
+      "notes": "缺可确认参考答案第 3 套；缺可核验录音"
+    },
+    {
+      "session": "2022-06",
+      "paper": "第 1、2 套",
+      "answer": "第 1、2、3 套",
+      "audio": "缺",
+      "notes": "缺试卷第 3 套；缺可核验录音"
+    },
+    {
+      "session": "2022-09",
+      "paper": "合卷：1 套主体 + 2 组写作与翻译变体",
+      "answer": "三套合卷参考解析",
+      "audio": "缺",
+      "notes": "缺可核验录音"
+    },
+    {
+      "session": "2022-12",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "缺",
+      "notes": "缺可核验录音"
+    },
+    {
+      "session": "2023-03",
+      "paper": "合卷：1 套主体 + 2 组写作与翻译变体",
+      "answer": "三套合卷参考解析",
+      "audio": "缺",
+      "notes": "缺可核验录音"
+    },
+    {
+      "session": "2023-06",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "缺",
+      "notes": "缺可核验录音"
+    },
+    {
+      "session": "2023-12",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "缺",
+      "notes": "缺可核验录音；新东方在线高清图版；音频只提供在线播放"
+    },
+    {
+      "session": "2024-06",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "录音 1、2",
+      "notes": "第 3 套页面链接指向第 1 套录音"
+    },
+    {
+      "session": "2024-12",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "录音 1、2",
+      "notes": "第 3 套页面链接指向第 1 套录音"
+    },
+    {
+      "session": "2025-06",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "录音 1、2",
+      "notes": "第 3 套页面链接指向第 1 套录音"
+    },
+    {
+      "session": "2025-12",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "录音 1、2",
+      "notes": "第 3 套页面链接指向第 1 套录音"
+    },
+    {
+      "session": "2026-06",
+      "paper": "第 1、2、3 套",
+      "answer": "第 1、2、3 套",
+      "audio": "录音 1、2",
+      "notes": "第 3 套页面链接指向第 1 套录音"
+    }
+  ],
+  "files": [
+    {
+      "session": "2017-06",
+      "set": 2,
+      "title": "CET6_2017-06_第2套_真题与答案.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c102"
+    },
+    {
+      "session": "2017-06",
+      "set": 3,
+      "title": "CET6_2017-06_第3套_真题与答案.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c93"
+    },
+    {
+      "session": "2017-12",
+      "set": 2,
+      "title": "CET6_2017-12_第2套_真题与答案.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c104"
+    },
+    {
+      "session": "2017-12",
+      "set": 3,
+      "title": "CET6_2017-12_第3套_真题与答案.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c95"
+    },
+    {
+      "session": "2018-12",
+      "set": 1,
+      "title": "CET6_2018-12_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c7"
+    },
+    {
+      "session": "2018-12",
+      "set": 2,
+      "title": "CET6_2018-12_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c9"
+    },
+    {
+      "session": "2018-12",
+      "set": 3,
+      "title": "CET6_2018-12_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c8"
+    },
+    {
+      "session": "2019-06",
+      "set": 1,
+      "title": "CET6_2019-06_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c19"
+    },
+    {
+      "session": "2019-06",
+      "set": 2,
+      "title": "CET6_2019-06_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c21"
+    },
+    {
+      "session": "2019-06",
+      "set": 3,
+      "title": "CET6_2019-06_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c20"
+    },
+    {
+      "session": "2019-12",
+      "set": 1,
+      "title": "CET6_2019-12_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c22"
+    },
+    {
+      "session": "2019-12",
+      "set": 2,
+      "title": "CET6_2019-12_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c24"
+    },
+    {
+      "session": "2019-12",
+      "set": 3,
+      "title": "CET6_2019-12_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c23"
+    },
+    {
+      "session": "2020-07",
+      "set": 1,
+      "title": "CET6_2020-07_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c35"
+    },
+    {
+      "session": "2020-09",
+      "set": 1,
+      "title": "CET6_2020-09_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c29"
+    },
+    {
+      "session": "2020-09",
+      "set": 2,
+      "title": "CET6_2020-09_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c30"
+    },
+    {
+      "session": "2020-12",
+      "set": 1,
+      "title": "CET6_2020-12_第1套_真题.pdf",
+      "source": "https://www.culr.edu.cn/pub/wyx/yyslj/78a86dbcb32c42d4984fae4b81681372.htm"
+    },
+    {
+      "session": "2020-12",
+      "set": 2,
+      "title": "CET6_2020-12_第2套_真题.pdf",
+      "source": "https://www.culr.edu.cn/pub/wyx/yyslj/78a86dbcb32c42d4984fae4b81681372.htm"
+    },
+    {
+      "session": "2020-12",
+      "set": 3,
+      "title": "CET6_2020-12_第3套_真题.pdf",
+      "source": "https://www.culr.edu.cn/pub/wyx/yyslj/78a86dbcb32c42d4984fae4b81681372.htm"
+    },
+    {
+      "session": "2021-06",
+      "set": 1,
+      "title": "CET6_2021-06_第1套_真题.pdf",
+      "source": "https://www.culr.edu.cn/pub/wyx/yyslj/b116a264d952426396daa0ea0a31cd9c.htm"
+    },
+    {
+      "session": "2021-06",
+      "set": 2,
+      "title": "CET6_2021-06_第2套_真题.pdf",
+      "source": "https://www.culr.edu.cn/pub/wyx/yyslj/b116a264d952426396daa0ea0a31cd9c.htm"
+    },
+    {
+      "session": "2021-06",
+      "set": 3,
+      "title": "CET6_2021-06_第3套_真题.pdf",
+      "source": "https://www.culr.edu.cn/pub/wyx/yyslj/b116a264d952426396daa0ea0a31cd9c.htm"
+    },
+    {
+      "session": "2021-12",
+      "set": 1,
+      "title": "CET6_2021-12_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c51"
+    },
+    {
+      "session": "2021-12",
+      "set": 2,
+      "title": "CET6_2021-12_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c52"
+    },
+    {
+      "session": "2021-12",
+      "set": 3,
+      "title": "CET6_2021-12_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c53"
+    },
+    {
+      "session": "2022-06",
+      "set": 1,
+      "title": "CET6_2022-06_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c54"
+    },
+    {
+      "session": "2022-06",
+      "set": 2,
+      "title": "CET6_2022-06_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c55"
+    },
+    {
+      "session": "2022-09",
+      "set": 0,
+      "title": "CET6_2022-09_三套合卷_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c66"
+    },
+    {
+      "session": "2022-12",
+      "set": 1,
+      "title": "CET6_2022-12_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c60"
+    },
+    {
+      "session": "2022-12",
+      "set": 2,
+      "title": "CET6_2022-12_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c61"
+    },
+    {
+      "session": "2022-12",
+      "set": 3,
+      "title": "CET6_2022-12_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c62"
+    },
+    {
+      "session": "2023-03",
+      "set": 0,
+      "title": "CET6_2023-03_三套合卷_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c80"
+    },
+    {
+      "session": "2023-06",
+      "set": 1,
+      "title": "CET6_2023-06_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c74"
+    },
+    {
+      "session": "2023-06",
+      "set": 2,
+      "title": "CET6_2023-06_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c75"
+    },
+    {
+      "session": "2023-06",
+      "set": 3,
+      "title": "CET6_2023-06_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/courses/cet-zhenti.html#c76"
+    },
+    {
+      "session": "2023-12",
+      "set": 1,
+      "title": "CET6_2023-12_第1套_真题.jpg",
+      "source": "https://cet6.koolearn.com/20240229/884398.html"
+    },
+    {
+      "session": "2023-12",
+      "set": 2,
+      "title": "CET6_2023-12_第2套_真题.jpg",
+      "source": "https://cet6.koolearn.com/20240229/884399.html"
+    },
+    {
+      "session": "2023-12",
+      "set": 3,
+      "title": "CET6_2023-12_第3套_真题.jpg",
+      "source": "https://cet6.koolearn.com/20240229/884400.html"
+    },
+    {
+      "session": "2024-06",
+      "set": 1,
+      "title": "CET6_2024-06_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202406-1.html"
+    },
+    {
+      "session": "2024-06",
+      "set": 2,
+      "title": "CET6_2024-06_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202406-2.html"
+    },
+    {
+      "session": "2024-06",
+      "set": 3,
+      "title": "CET6_2024-06_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202406-3.html"
+    },
+    {
+      "session": "2024-12",
+      "set": 1,
+      "title": "CET6_2024-12_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202412-1.html"
+    },
+    {
+      "session": "2024-12",
+      "set": 2,
+      "title": "CET6_2024-12_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202412-2.html"
+    },
+    {
+      "session": "2024-12",
+      "set": 3,
+      "title": "CET6_2024-12_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202412-3.html"
+    },
+    {
+      "session": "2025-06",
+      "set": 1,
+      "title": "CET6_2025-06_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202506-1.html"
+    },
+    {
+      "session": "2025-06",
+      "set": 2,
+      "title": "CET6_2025-06_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202506-2.html"
+    },
+    {
+      "session": "2025-06",
+      "set": 3,
+      "title": "CET6_2025-06_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202506-3.html"
+    },
+    {
+      "session": "2025-12",
+      "set": 1,
+      "title": "CET6_2025-12_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202512-1.html"
+    },
+    {
+      "session": "2025-12",
+      "set": 2,
+      "title": "CET6_2025-12_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202512-2.html"
+    },
+    {
+      "session": "2025-12",
+      "set": 3,
+      "title": "CET6_2025-12_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202512-3.html"
+    },
+    {
+      "session": "2026-06",
+      "set": 1,
+      "title": "CET6_2026-06_第1套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202606-1.html"
+    },
+    {
+      "session": "2026-06",
+      "set": 2,
+      "title": "CET6_2026-06_第2套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202606-2.html"
+    },
+    {
+      "session": "2026-06",
+      "set": 3,
+      "title": "CET6_2026-06_第3套_真题.pdf",
+      "source": "https://eol.nju.edu.cn/cet6/papers/202606-3.html"
+    }
+  ],
+  "method": "仅统计所收录试卷的可提取卷面词汇。跳过通用说明与答案，常见词形归并，同场完全相同的英语句段去重。合卷保留写作变体。听力 MP3 未转写。考试标签取自 ECDICT，去除中考标签、通用语料前 1,349 名及常见基础词和它们的词形。",
+  "matchesPerFile": {
+    "2017-06-2": 344,
+    "2017-06-3": 292,
+    "2017-12-2": 320,
+    "2017-12-3": 275,
+    "2018-12-1": 354,
+    "2018-12-2": 335,
+    "2018-12-3": 303,
+    "2019-06-1": 384,
+    "2019-06-2": 394,
+    "2019-06-3": 349,
+    "2019-12-1": 382,
+    "2019-12-2": 420,
+    "2019-12-3": 359,
+    "2020-07-1": 472,
+    "2020-09-1": 297,
+    "2020-09-2": 279,
+    "2020-12-1": 422,
+    "2020-12-2": 412,
+    "2020-12-3": 288,
+    "2021-06-1": 417,
+    "2021-06-2": 437,
+    "2021-06-3": 302,
+    "2021-12-1": 395,
+    "2021-12-2": 397,
+    "2021-12-3": 275,
+    "2022-06-1": 395,
+    "2022-06-2": 351,
+    "2022-09-0": 423,
+    "2022-12-1": 439,
+    "2022-12-2": 372,
+    "2022-12-3": 304,
+    "2023-03-0": 399,
+    "2023-06-1": 425,
+    "2023-06-2": 364,
+    "2023-06-3": 308,
+    "2023-12-1": 446,
+    "2023-12-2": 457,
+    "2023-12-3": 285,
+    "2024-06-1": 415,
+    "2024-06-2": 356,
+    "2024-06-3": 352,
+    "2024-12-1": 527,
+    "2024-12-2": 432,
+    "2024-12-3": 326,
+    "2025-06-1": 442,
+    "2025-06-2": 480,
+    "2025-06-3": 40,
+    "2025-12-1": 406,
+    "2025-12-2": 370,
+    "2025-12-3": 306,
+    "2026-06-1": 375,
+    "2026-06-2": 442,
+    "2026-06-3": 239
+  },
+  "wordCount": 3164,
+  "examplesCount": 2140
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#192d26">
+<meta name="description" content="按大学英语六级真题词频筛词，用语境与拼写复习自己的生词。">
+<title>词频手册 · 六级词汇复习</title>
+<link rel="icon" type="image/svg+xml" href="./icon.svg">
+<link rel="stylesheet" href="./style.css">
+<script defer src="./data.js"></script>
+<script defer src="./app.js"></script>
+</head>
+<body>
+<a class="skip" href="#workspace">跳到复习区域</a>
+<div class="shell">
+<header class="mast">
+  <a class="brand" href="#screen"><span class="stamp" aria-hidden="true">6</span><span>词频手册<small>CET-6 FIELD NOTES</small></span></a>
+  <nav aria-label="学习页面">
+    <a href="#screen" data-tab="screen">筛词</a>
+    <a href="#review" data-tab="review">今日复习</a>
+    <a href="#words" data-tab="words">词库</a>
+  </nav>
+  <a class="notes" href="#notes">资料与进度 <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+  <section class="intro">
+    <div><p class="kicker"><span></span> PERSONAL STUDY EDITION</p><h1>先刷高频，<br class="mobile">再背生词<span>。</span></h1><p id="coverage">正在读取真题统计…</p></div>
+    <div class="index-mark" aria-hidden="true"><b>06</b><small>LEXICAL INDEX</small></div>
+  </section>
+  <div class="dashboard">
+    <aside class="stats" aria-label="学习进度">
+      <p class="kicker">MY PROGRESS</p><h2>学习记录</h2>
+      <dl><div><dt>已筛词</dt><dd id="screened">—</dd></div><div><dt>已掌握</dt><dd id="known">—</dd></div><div><dt>生词库</dt><dd id="saved">—</dd></div><div class="due"><dt>现在待复习</dt><dd id="due">—</dd></div></dl>
+      <p class="aside-note">先回想，再揭晓。<br>把复习时间留给记不住的词。</p>
+    </aside>
+    <section class="workspace" id="workspace" aria-label="复习区域" tabindex="-1">
+      <noscript>请启用 JavaScript 后打开词频手册。</noscript>
+      <div id="view"></div>
+    </section>
+  </div>
+</main>
+<footer><span>词频手册 · 个人六级复习</span><span>先看语境，再记词义。</span></footer>
+</div>
+<div id="notice" role="status"></div>
+</body>
+</html>
