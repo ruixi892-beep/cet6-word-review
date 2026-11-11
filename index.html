@@ -2,14 +2,16 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src https://api.github.com; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#192d26">
 <meta name="description" content="按大学英语六级真题词频筛词，用语境与拼写复习自己的生词。">
 <title>词频手册 · 六级词汇复习</title>
 <link rel="icon" type="image/svg+xml" href="./icon.svg">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css?v=sync1">
 <script defer src="./data.js?v=2"></script>
-<script defer src="./app.js"></script>
+<script defer src="./sync.js?v=1"></script>
+<script defer src="./app.js?v=sync1"></script>
 </head>
 <body>
 <a class="skip" href="#workspace">跳到复习区域</a>
@@ -21,7 +23,7 @@
     <a href="#review" data-tab="review">今日复习</a>
     <a href="#words" data-tab="words">词库</a>
   </nav>
-  <a class="notes" href="#notes">资料与进度 <span aria-hidden="true">↗</span></a>
+  <a class="notes" href="#notes">资料与进度 <span aria-hidden="true">↗</span><small id="sync-summary">未连接同步</small></a>
 </header>
 <main>
   <section class="intro">

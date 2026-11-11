@@ -9,6 +9,7 @@ let tab = "", reveal = false, group = null, detail = null, result = "";
 let filter = { query: "", level: "", status: "", page: 0 };
 let noticeTimer;
 let records = Object.create(null);
+let syncClient;
 
 function safe(text) {
   return String(text ?? "").replace(/[&<>"']/g, char => ({
@@ -39,9 +40,71 @@ function readRecords(raw) {
   }
   return clean;
 }
-function persist() {
+function persist(fromCloud = false) {
   try { localStorage.setItem(key, JSON.stringify(records)); }
   catch { notice("当前浏览器无法保存进度，请导出备份。"); }
+  if (!fromCloud) syncClient?.changed();
+}
+
+function receiveSyncedRecords(merged) {
+  const previous = records;
+  const previousCard = tab === "screen" ? screenWord()?.w : null;
+  records = merged;
+  persist(true);
+  if (group?.words.some(({w}) => CET6Sync.recordKey(previous[w]) !== CET6Sync.recordKey(records[w]))) {
+    group = null;
+    reveal = false;
+    result = "学习记录已更新，可以开始下一组。";
+  }
+  refreshStats();
+  if (tab === "notes" || (tab === "screen" && previousCard === screenWord()?.w) ||
+      (tab === "review" && group)) return;
+  if (tab === "words" && !detail) { listRows(); return; }
+  reveal = false;
+  render();
+}
+
+function syncSettings() {
+  if (!syncClient) return '<p>学习进度保存在当前浏览器。</p>';
+  return '<section class="sync-settings" aria-labelledby="sync-heading">' +
+    '<h3 id="sync-heading">跨设备同步</h3>' +
+    '<p id="sync-status" role="status">未连接同步</p>' +
+    '<form id="sync-connect" class="sync-connect" hidden>' +
+      '<p>每台设备连接一次，之后打开网页就能接着背。首次连接会合并这台设备已有的进度。</p>' +
+      '<p><a target="_blank" rel="noopener noreferrer" href="' + safe(CET6Sync.tokenLink) + '">打开 GitHub 生成细粒度授权码 ↗</a>。' +
+      '在 Repository access 选 <strong>Only select repositories</strong>，只勾选 <strong>' +
+      safe(CET6Sync.repository) + '</strong>，并确认 Contents 为 <strong>Read and write</strong>。</p>' +
+      '<div class="sync-fields"><label for="sync-token">GitHub 授权码</label>' +
+      '<input class="input" id="sync-token" type="password" maxlength="261" autocomplete="off" autocapitalize="none" spellcheck="false" required>' +
+      '<button class="btn primary" type="submit">连接并同步</button></div>' +
+      '<p class="muted">请把授权码填在这里。手机和电脑可以用同一串码连接。</p>' +
+    '</form>' +
+    '<div id="sync-actions" class="controls" hidden>' + button("sync-now", "立即同步", "quiet") +
+      button("sync-disconnect", "解除本机连接", "quiet") + '</div></section>';
+}
+
+function renderSyncState() {
+  if (!syncClient) return;
+  const {phase, message, lastSync} = syncClient.status;
+  const labels = {off: "未连接同步", connecting: "正在连接", syncing: "正在同步",
+    queued: "待同步", synced: "已同步", paused: "同步暂停"};
+  const summary = document.getElementById("sync-summary");
+  if (summary) {
+    summary.textContent = labels[phase];
+    summary.dataset.phase = phase;
+  }
+  const status = document.getElementById("sync-status");
+  if (!status) return;
+  status.textContent = labels[phase] +
+    (phase === "synced" && lastSync ? " · " + new Date(lastSync).toLocaleTimeString("zh-CN", {hour:"2-digit",minute:"2-digit"}) : "") +
+    (message ? "。 " + message : "");
+  const form = document.getElementById("sync-connect");
+  form.hidden = syncClient.connected;
+  for (const control of form.elements) control.disabled = syncClient.busy;
+  const actions = document.getElementById("sync-actions");
+  actions.hidden = !syncClient.connected;
+  actions.querySelector('[data-action="sync-now"]').disabled = syncClient.busy || phase === "paused";
+  actions.querySelector('[data-action="sync-disconnect"]').disabled = syncClient.busy;
 }
 function classify(word, status) {
   if (group?.words.some(w => w.w === word)) group = null;
@@ -209,17 +272,18 @@ function library() {
 }
 function notes() {
   const meta = dataset.meta;
-  box("资料与进度", "统计口径", '<p>词库统计来自已核验的 ' + meta.paperCount + ' 份六级试卷，覆盖 ' +
+  box("资料与进度", "", syncSettings() + '<h3>词库统计</h3><p>词库统计来自已核验的 ' + meta.paperCount + ' 份六级试卷，覆盖 ' +
     meta.sessions.length + ' 个考期。收录试卷数、缺卷和听力情况见桌面资料包的清单。</p>' +
     '<p>参与统计的考期：' + meta.sessions.join("、") + '。</p>' +
     '<p>计入可提取的题干、选项和阅读材料（含已识别扫描页），合并常见词形，跳过答题说明与重复材料。听力词频仅包含卷面可读文字。' +
     '词汇级别和中文释义来自 <a href="https://github.com/skywind3000/ECDICT">ECDICT</a>，是备考标签。</p>' +
     '<p>有例句的词条：' + words.filter(w => w.ex).length.toLocaleString("zh-CN") + ' / ' + words.length.toLocaleString("zh-CN") + '。学习例句来自 <a href="https://tatoeba.org/en/terms_of_use">Tatoeba</a> 或本页自编。' +
     'Tatoeba 例句按卡片标注的 <a href="https://creativecommons.org/licenses/by/2.0/fr/">CC BY 2.0 FR</a> 或 <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> 使用。</p>' +
-    '<h3>学习进度</h3><p>进度保存在当前浏览器。换设备时先导出，再在新设备导入。导入会保留每个词时间较新的记录。</p>' +
+    '<h3>手动备份</h3><p>需要留存备份时可以导出。导入会保留每个词时间较新的记录。</p>' +
     '<div class="controls">' + button("export","导出进度","primary") +
     '<label class="btn quiet" for="restore" tabindex="0">导入进度</label><input class="sr" id="restore" type="file" accept=".json,application/json"></div>' +
     '<p><a href="./ECDICT-LICENSE.txt">ECDICT 许可</a> · <a href="./coverage.json">语料统计明细</a></p>', "support");
+  renderSyncState();
 }
 function render(focus) {
   refreshStats();
@@ -266,9 +330,20 @@ function initialize() {
     const stored = localStorage.getItem(key);
     if (stored) records = readRecords(JSON.parse(stored));
   } catch { notice("暂时无法读取浏览器进度。"); }
+  if (window.CET6Sync) {
+    syncClient = CET6Sync.create({getRecords: () => records, applyRecords: receiveSyncedRecords,
+      cleanRecords: readRecords, onStatus: renderSyncState});
+    const syncOnReturn = () => { if (!document.hidden) void syncClient.syncNow(); };
+    window.addEventListener("focus", syncOnReturn);
+    window.addEventListener("online", syncOnReturn);
+    document.addEventListener("visibilitychange", syncOnReturn);
+    setInterval(syncOnReturn, 45000);
+  }
   document.getElementById("coverage").textContent = "真题语料 " + dataset.meta.sessions.length +
     " 个考期 · " + dataset.meta.paperCount + " 份试卷 · " + words.length.toLocaleString("zh-CN") + " 个备考词";
   navigate();
+  renderSyncState();
+  void syncClient?.syncNow();
   window.addEventListener("hashchange",navigate);
   view.addEventListener("click",e => {
     const button = e.target.closest("[data-action]");
@@ -303,8 +378,16 @@ function initialize() {
     else if (action === "list") { detail = null; render(); document.querySelector("#query")?.focus(); }
     else if (action.endsWith("-page")) { filter.page += action === "prev-page" ? -1 : 1; listRows(); }
     else if (action === "export") exportProgress();
+    else if (action === "sync-now") void syncClient.syncNow();
+    else if (action === "sync-disconnect") syncClient.disconnect();
   });
-  view.addEventListener("submit",e => {
+  view.addEventListener("submit", async e => {
+    if (e.target.id === "sync-connect") {
+      e.preventDefault();
+      const input = e.target.querySelector("#sync-token");
+      if (await syncClient.connect(input.value)) input.value = "";
+      return;
+    }
     if (e.target.id !== "spelling") return;
     e.preventDefault();
     settle(document.querySelector("#answer").value.trim().toLowerCase() === current()?.w);
